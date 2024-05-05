@@ -1,0 +1,24 @@
+*{
+    margin:0%;
+    padding: 0%;
+    box-sizing: border-box;
+}
+header{
+    display: flex;
+}
+
+.image{
+    height: 90px;
+    mix-blend-mode: multiply;
+}
+#keys>a{
+    margin: 5px;
+    text-decoration: none;
+    border-top: 3px transparent solid;
+    font-size: large;
+}
+
+#keys>a:hover{
+    border-top: 3px green solid;
+    font-size: larger;
+}

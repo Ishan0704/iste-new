@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ISTE | KKWIEER</title>
+    <link rel="stylesheet" href="/iste-new/home/style.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+        crossorigin="anonymous"></script>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    
+</head>
+
+<body>
+    <div class="alert alert-success alert-dismissible fade show" role="alert">
+        <strong>ISTE'S Master Student Program just ended</strong>
+        <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+    </div>
+    <header>
+        <div class="col-2 text-start">
+            <a href="http://www.isteonline.in/" class="image">
+                <img class="image" src="/iste-new/img/iste-logo.png" alt="iste-logo">
+            </a>
+        </div>
+
+        <div id="keys" class="col-8  d-flex align-items-center justify-content-end">
+            <a href="#home">Home</a>
+            <a href="#overview">Overview</a>
+            <a href="#events">Events</a>
+            <a href="#" data-bs-toggle="modal" data-bs-target="#membershipModal">Membership</a>
+            <a href="#contact">Contact</a>
+            <a href="" data-bs-toggle="modal" data-bs-target="#helpModal">Help</a>
+        </div>
+        <div class="col-2 text-end">
+            <a href="https://kkwagh.edu.in/engineering/" class="image">
+                <img class="image" src="/iste-new/img/kkw-logo.png" alt="kkw logo">
+            </a>
+        </div>
+    </header>
+
+    <!-- All Modals included here -->
+    <div>
+        <!-- Modal for membership -->
+        <div class="modal fade" id="membershipModal" tabindex="-1" aria-labelledby="exampleModalLabel"
+            aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h1 class="modal-title fs-5" id="exampleModalLabel">Membership Form link</h1>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+
+                        Heyy !! <br>
+                        Excited To Be A Part Of ISTE-KKWIEER Family ?<br>
+                        Do fill out the form by clicking on image below <br><br>
+
+                        <a href="https://docs.google.com/forms/d/e/1FAIpQLSdpHjJEeuY0eFg7_-f5jqEGjPFUSBurw-5bWeRUs9hHU9f6hQ/viewform"
+                            target="_blank">
+                            <img src="/ISTE-Website/img/membership.jpg" alt="Membership Form Image"
+                                style="max-width: 450px; padding: 0px;border: 1px black solid;">
+                        </a>
+
+                        <br><br>
+                        Membership Fees : <br>
+                        1. First Year: ₹ 295/- <br>
+                        2. Second Year: ₹ 236/- <br>
+                        3. Third Year: ₹ 177/-
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Modal for membership ended -->
+
+        <!-- Modal for help  -->
+        <div class="modal fade" id="helpModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog  modal-dialog-centered modal-dialog-scrollable">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h1 class="modal-title fs-5" id="exampleModalLabel">Help Form</h1>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+
+                        Have Some Query !! <br>
+                        Tell Us By Filling Out This Form
+
+                        <form id="queryForm" action="send.php" method="post" style="padding-top: 15px;">
+
+                            <label for="name">1.<i class="fa-solid fa-user"></i> Name:</label>
+                            <input type="text" id="name" name="name" required placeholder="Enter Name"><br>
+
+                            <label for="phone">2.<i class="fa-solid fa-phone"></i> Phone:</label>
+                            <input type="tel" id="phone" name="phone" pattern="[0-9]{10}"
+                                placeholder="Enter Phone number" required><br>
+
+                            <label for="email">3.<i class="fa-solid fa-envelope"></i> Email:</label>
+                            <input type="email" id="email" name="email" required placeholder="Enter E-mail"><br>
+
+                            <label for="year" style="padding-top: 15px;;">4.<i class="fa-solid fa-user-graduate"></i>
+                                Year Of Education
+                                :<br>
+
+                                <label for="firstYear" style="padding-top: 10px;">
+                                    <input type="radio" id="firstYear" name="year" value="First Year" required>
+                                    First Year
+                                </label>
+                                <label for="secondYear">
+                                    <input type="radio" id="secondYear" name="year" value="Second Year"> Second
+                                    Year
+                                </label>
+                                <label for="thirdYear">
+                                    <input type="radio" id="thirdYear" name="year" value="Third Year"> Third
+                                    Year
+                                </label>
+                                <label for="fourthYear">
+                                    <input type="radio" id="fourthYear" name="year" value="Fourth Year"> Fourth
+                                    Year
+                                </label>
+                                <br>
+                            </label>
+
+                            <input type="hidden" id="branch" name="branch">
+                            <!-- Hidden input field for selected branch -->
+                            <div class="dropdown">
+                                5.<i class="fa-solid fa-graduation-cap"></i>
+                                <button type="button" class="btn btn-outline-info dropdown-toggle"
+                                    id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true"
+                                    aria-expanded="false" style="width: 220px;" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+                                    Choose Branch
+                                </button>
+
+                                <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                                    <a class="dropdown-item" href="#"
+                                        onclick="selectBranch('Artificial Intelligence and Data Science')">Artificial
+                                        Intelligence and Data Science</a>
+                                    <a class="dropdown-item" href="#"
+                                        onclick="selectBranch('Chemical Engineering')">Chemical Engineering</a>
+                                    <a class="dropdown-item" href="#" onclick="selectBranch('Civil Engineering')">Civil
+                                        Engineering</a>
+                                    <a class="dropdown-item" href="#"
+                                        onclick="selectBranch('Computer Engineering')">Computer Engineering</a>
+                                    <a class="dropdown-item" href="#"
+                                        onclick="selectBranch('Computer Science and Design')">Computer Science
+                                        and Design</a>
+                                    <a class="dropdown-item" href="#"
+                                        onclick="selectBranch('Electrical Engineering')">Electrical
+                                        Engineering</a>
+                                    <a class="dropdown-item" href="#"
+                                        onclick="selectBranch('Electronics and Telecommunication')">Electronics
+                                        and Telecommunication</a>
+                                    <a class="dropdown-item" href="#"
+                                        onclick="selectBranch('Information Technology')">Information
+                                        Technology</a>
+                                    <a class="dropdown-item" href="#"
+                                        onclick="selectBranch('Mechanical Engineering')">Mechanical
+                                        Engineering</a>
+                                    <a class="dropdown-item" href="#"
+                                        onclick="selectBranch('Robotics and Automation')">Robotics and
+                                        Automation</a>
+                                </div>
+                            </div>
+
+                            <br>
+                            <span id="selectedBranch" style="padding:10px 10px 20px 30px;">Selected Branch: None</span>
+                            <br>
+
+                            <!-- JavaScript function to update the hidden input field with the selected branch -->
+                            <script>
+                                function selectBranch(branch) {
+                                    document.getElementById('selectedBranch').innerText = "Selected Branch: " + branch;
+                                    document.getElementById('branch').value = branch; // Update hidden input field with selected branch
+                                }
+                            </script>
+
+
+                            <label for="subject-of-query" style="padding-top: 15px;">6.<i
+                                    class="fa-solid fa-pen-fancy"></i> Subject Of
+                                Query:</label>
+                            <input type="text" id="subject" name="subject" placeholder="Enter Subject Of Query"
+                                required>
+
+
+                            <label for="query" style="padding-top: 10px;">7.<i class="fa-solid fa-keyboard"></i>
+                                Type Your
+                                Query:</label><br>
+                            <textarea id="query" name="query" required style="width: 420px; height: 100px;"
+                                placeholder="Type Your Query"></textarea><br><br>
+
+                            <button type="submit" style="margin-left: 150px; width:100px; height:auto"
+                                class="btn btn-outline-success" name="submit">Submit</button>
+                        </form>
+
+
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Modal for help ended -->
+    </div>
+
+
+</body>
+
+</html>
